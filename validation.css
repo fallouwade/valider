@@ -147,6 +147,17 @@ header{
 }
 
 /*dalal ak diam*/
+/*#togotayeur{
+	background-image: url(img/logo_tayeur.png);
+	padding: 60px 0px 30px 40px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: white;
+}
+*/
+
+
+
 
 .bienvenu{
 	background-image: url(img/bienvenu1.png);
@@ -191,6 +202,29 @@ color: #005368;
 .bienvenu div{
 	padding-bottom: 35px;
 }
+
+
+
+/*tayeur*/
+
+#tayeur{
+	background-image: url(img/logo_tayeur.png);
+	padding: 60px 0px 30px 40px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: white;
+	background-position: top;
+	background-color: red;
+}
+
+#tayeur div + p{
+	padding-top: 15px;
+}
+
+#tayeur div{
+	padding-bottom: 35px;
+}
+
 
 
 /*div1*/
@@ -238,6 +272,8 @@ margin-left: 3%;
 .ambassad1 ul {
 	list-style-image: url("img/puce1.png");
 }
+
+
 
 .img1{
 	width: 80%;
@@ -316,6 +352,12 @@ transform: translateY(-15px);
 
 }
 
+#taye1, .fonction1{
+	color: black;
+
+}
+
+
 .fonctionnalite{
 	place-items: center;
 	margin: auto;
@@ -344,6 +386,13 @@ grid-template-columns: 50% 50%;
     animation-iteration-count: infinite;
 
 
+}
+
+.fonction_tay{
+	display: grid;
+grid-template-columns: 50% 50%;
+margin: 0% 0% 0% 0%;
+padding-bottom: 16px;
 }
 
 .fonction1 button{
@@ -493,7 +542,7 @@ transform: translateY(-15px);
 	padding-left: 10%;
 }
 .aplli{
-	padding: 5% 0% 2% 0%;
+	padding: 5% 0% 0% 0%;
 }
 
 .partenaire{
@@ -688,61 +737,70 @@ transform: translateX(-90px);
 
 .sec{
 	background-color: #ddd;
-	padding-bottom: 30px;
+	padding-bottom: 1px;
+}
+
+#temoigne1{
+	padding-left: 5%;
+	    transform: translateY(81%);
+}
+#temoigne1 .niveau{
+	margin: 0%;
 }
 
 
-/*TEMOIGNAGE*/
+/*video tayeur*/
 
 
-.temoignage{
-	display: flex;
-	justify-content: center;
-	gap: 2%;
-
-
+.container-video{
+        display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    align-self: flex-start;
+    padding: 5px 5%;
+    justify-content: center;
 }
 
 
-.temoigne i{
-		color: #0BCAD4;
-}
-.niveau_h {
-    margin-left: -3%;}
+.container-video .list-video {
+    height: 357px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    width: 100%}
 
+    .container-video .list-video .video1 iframe {
+    width: 100px;
+    border-radius: 5px;
+    height: 90px;}
 
-.temoigne{
-	width: 25%;
-
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-		padding-left: 11px;
-		background-color: white;
-		border-radius: 10px;
-		
-
-}
-
-.temoigne1 img{
-	width: 60px;
-	border-radius: 50%;
-	display: inline;
+    titre-videos {
+    font-size: 12px;
+    line-height: 16px;
 }
 
-.temoigne1 div p{
-	line-height: 1;
-	font-size: 13px;
-}
+.container-video .list-video .video1 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-radius: 5px;
+      margin: 10px;
+    padding: 10px;}
 
-.temoigne1 div p:nth-child(1){
-	font-weight: bold;
-}
-.temoigne1 div p:nth-child(2){
-		color: grey;
 
-}
-.temoigne1{
-	display: flex;
-}
+    .div_video{
+        width: 100%;
+        height: 100%;
+    }
+
+    .div_video iframe{
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+
 /*FOOTER*/
 
 footer{
@@ -815,13 +873,13 @@ transform:translate(-1285px, 0px) ;}
 	background-color: #ddd;
 }
 .niveau_h{
-	transform: translateY(15px);
+	transform: translateY(6px);
 }
 
 .slider-1 {
     max-width: 100%;
-    margin: 50px auto;
-    max-height: 100%;
+    margin: 40px auto;
+ 
     overflow: hidden;
    
 }
@@ -839,7 +897,7 @@ input[type="radio"] {
     padding: 50px 0;
     width: 100%;
     margin-top: -50px;
-    color: #f1f1f1;}
+    }
     .full-boxer {
     display: flex;
     /* flex-wrap: wrap; */
@@ -877,29 +935,27 @@ main {
     transform: translateX(-50%);
     display: flex;
 }
-.control-dot:first-child {
-    background-color: blue;
-}
-.control-dot {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: gray;
-    margin: 20px 5px;
-    cursor: pointer;
-}
-.control-dot {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: gray;
-    margin: 20px 5px;
-    cursor: pointer;
+
+.controls label{
+	visibility: initial;
 }
 
-slider section {
+
+.control-dot:last-child {
+    background-color: #0BCAD4 ;
+}
+.control-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: grey;
+    margin: 20px 5px;
+    cursor: pointer;
+    color: red;
+}
+
+.slider section {
     flex-shrink: 0;
     width: 100%;
 }
@@ -980,9 +1036,120 @@ slider section {
     transform: translateX(-400%);
 }
 }
-.name, stong, span{
-	color: black;
+
+
+
+/*tayeur_forfait*/
+
+#card{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 2%;
+	justify-content: center;
+	align-items: center;
+	margin: 1% 2%;
+
 }
+
+.card{
+	 box-shadow: 3px 3px 25px rgba(0,0,0,0.3);
+	background-color:  #F8F8F8;
+
+}
+
+.borde1{
+	text-align: center;
+	background-color: #eee;
+	padding: 2px 0px;
+}
+
+
+.borde{
+	border-bottom: 1px solid #eee;
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+	padding-left: 7px;
+	font-size: 15px;
+	padding-top: 10px;
+}
+
+.card button{
+	padding: 6px 13px 6px 13px;
+	width: 70%;
+	margin: auto;
+	margin-top: 16%;
+	margin-bottom: 7%;
+	border-radius: 5px;
+
+	background-color: 
+#E83538;
+border: none;
+display: flex;
+justify-content: center;
+	color: white;
+
+}
+
+.card div p span{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+
+/*CONTACT*/
+.contact1{
+	display: grid;
+	grid-template-columns: 60% 1fr;
+	justify-content: center;
+	gap: 3%;
+	align-items: center;
+	margin: auto;
+	margin: 1% 5%;
+}
+
+.form1 div{
+	display: flex;
+
+	flex-direction: column;
+	align-items: baseline;
+}
+.contact1 div button{
+	padding: 4px 17px;
+	background-color: #0BCAD4;
+	border: none;
+	color: white;
+	border-radius: 5px;
+	margin: 5px 1%;
+
+}
+.form1 label{
+	visibility: initial;
+}
+.form1 input {
+	width: 85%;
+	padding: 7px 3px;
+	color: #ddd;
+}
+.iframe1 iframe{
+		width: 90%;
+		height: 50vh;
+}
+
+.iframe1 p{
+	color: #ddd;
+}
+
+.form1 textarea{
+	color: #ddd;
+}
+
+.form1 div{
+	margin: 15px 10px;
+}
+
+
+
+
 
 @media screen and (max-width: 768px){
 
@@ -995,12 +1162,17 @@ slider section {
 	width: 129%;
 
 }
-.lorem1{
-	23vw
-}
-.niveau_h{
 
+.card{
+	margin: initial;
 }
+
+
+
+#card{
+	display: grid;
+	grid-template-columns: 1fr 1fr ;}
+
 
 .niveau1{
 	margin: initial;
@@ -1056,9 +1228,7 @@ transform: translateX();
 	font-size: 13px;
 
 }
-#niveau{
-	
-}
+
 .menu div {
 	margin: initial;
 }
@@ -1113,11 +1283,10 @@ transform: translateX();
 	background-size: 100%;
 }
 
-.div1, .pour1{
-	grid-template-columns: 1fr;
-}
+ 
 .div1{
 	margin-left: 0%;
+
 }
 .ambassadeur{
 	grid-template-columns: 90%;
@@ -1165,10 +1334,7 @@ div{
 .pour{
 	margin-top: 25px;
 }
-.fonction{
-	height: 73vh;
-		grid-template-columns: 90%;
-}
+
 
 .fonction1{
 	padding: 0px 0px 0px 49px;
@@ -1181,9 +1347,8 @@ div{
 .ambassad .niveau{
 	margin-left: 13%;
 }
-.ordi{display: none;}
-}
 
+}
 
 @media screen and (max-width: 500px){
 	.equipe1{
@@ -1196,11 +1361,39 @@ div{
 	.ambassad .niveau{
 	margin-left: 13%;
 }
+
+
+.contact1{
+	
+	grid-template-columns:  1fr;
+
+}
+.fonction{
+	grid-template-columns: 90%;	
+	height: 71vh;
+}
+
+.fonction_tay{
+	grid-template-columns: 95%;
+}
+
+#card{
+	display: grid;
+	grid-template-columns: 1fr }
+
 .back{
 		margin-left: 26px;
 }
 .flex1 img{
 	width: 114%;
+}
+
+.ordi{display: none;
+}
+
+.div1{
+	margin-left: 0%;
+	grid-template-columns: 1fr;
 }
 
 .flex2{
@@ -1219,11 +1412,34 @@ div{
 	margin-left: 2%;
 }
 
+#temoigne1 {
+    padding-left: 14%;
+    margin-top: 26%}
+
 
 .niveau_h {
     margin-left: -9%;}
+
 	.ambassad1 {
     padding-left: 5%;}
+
 .appli1 div img {
     padding-left: 34%;}
+
+    #cache {
+    display: none;
+}
+
+.container-video,.pour1{
+	grid-template-columns: 1fr;
+}
+
+.contact2 #temoigne1{
+	margin-top: -9%;
+}
+
+.contact2{
+	padding-bottom: 10%;
+}
+
 }
